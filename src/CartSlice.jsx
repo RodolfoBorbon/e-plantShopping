@@ -19,7 +19,7 @@ export const CartSlice = createSlice({
         state.items = state.items.filter(item => item.name !== action.payload);
     },
     updateQuantity: (state, action) => {
-        const { name, amount } = action.payload; // Destructure the product name and new quantity from the action payload
+        const { name, quantity } = action.payload; // Destructure the product name and new quantity from the action payload
         const itemToUpdate = state.items.find(item => item.name = name);
         if (itemToUpdate) {
             itemToUpdate.quantity = quantity; // If the item is found, update its quantity to the new value
